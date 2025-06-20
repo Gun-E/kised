@@ -1,86 +1,169 @@
 import React, { useState } from "react";
+import CustomScrollbar from "@/app/CustomScrollbar";
+import PDFViewer from "@/app/PDFViewer";
 
 const tableData = [
     {
         id: 1,
-        target: "송캠프 운영 및 음원 제작 (인디 아티스트 발굴...)",
-        similar: "송캠프 운영 및 음원 제작 (인디 아티스트 발굴...)",
+        target: "송캠프 운영 및 음원",
+        similar: "송캠프 운영 및 음원",
         match: "부분 일치",
+        imageSrc1: "/images/task1_original.png",
+        imageSrc2: "/images/task1_similar.png",
+        fileName1: "original_송캠프.pdf",
+        fileName2: "유사_송캠프.pdf"
     },
     {
         id: 2,
-        target: "공연 실황 콘텐츠 제작 및 배포 (유튜브, SNS ...)",
-        similar: "공연 실황 콘텐츠 제작 및 배포 (유튜브, SNS ...)",
+        target: "송캠프 운영 및 음원 제작",
+        similar: "송캠프 운영 및 음원 제작",
         match: "완전 일치",
+        imageSrc1: "/images/task2_original.png",
+        imageSrc2: "/images/task2_similar.png",
+        fileName1: "original_공연콘텐츠.pdf",
+        fileName2: "유사_공연콘텐츠.pdf"
     },
     {
         id: 3,
-        target: "음원 유통 및 매칭 서비스 활성화 (AI 기반 추천...)",
-        similar: "음원 유통 및 매칭 서비스 활성화 (AI 기반 추천...)",
+        target: "AI 기반 추천 시스템",
+        similar: "AI 기반 추천 시스템과",
         match: "부분 일치",
+        imageSrc1: "/images/task1_original.png",
+        imageSrc2: "/images/task1_similar.png",
+        fileName1: "original_음원유통.pdf",
+        fileName2: "유사_음원유통.pdf"
     },
     {
         id: 4,
-        target: "창작자 수익 모델 다각화 (광고 음악, OST 프로...)",
-        similar: "창작자 수익 모델 다각화 (광고 음악, OST 프로...)",
+        target: "창작자 수익 모델 다각화 (광고 음악, OST 프로덕션)",
+        similar: "창작자 수익 모델 다각화 (광고 음악, OST 프로덕션)",
         match: "완전 일치",
+        imageSrc1: "/images/task2_original.png",
+        imageSrc2: "/images/task2_similar.png",
+        fileName1: "original_수익모델.pdf",
+        fileName2: "유사_수익모델.pdf"
     },
+    {
+        id: 5,
+        target: "디지털 음악 플랫폼 통합 관리 시스템 개발",
+        similar: "음악 스트리밍 플랫폼 관리 솔루션 구축",
+        match: "부분 일치",
+        imageSrc1: "/images/task1_original.png",
+        imageSrc2: "/images/task1_similar.png",
+        fileName1: "original_플랫폼관리.pdf",
+        fileName2: "유사_플랫폼관리.pdf"
+    },
+    {
+        id: 6,
+        target: "아티스트 매니지먼트 및 홍보 마케팅 서비스",
+        similar: "음악가 매니지먼트 및 프로모션 플랫폼 운영",
+        match: "부분 일치",
+        imageSrc1: "/images/task2_original.png",
+        imageSrc2: "/images/task2_similar.png",
+        fileName1: "original_매니지먼트.pdf",
+        fileName2: "유사_매니지먼트.pdf"
+    },
+    {
+        id: 7,
+        target: "음악 교육 콘텐츠 제작 및 온라인 강의 플랫폼",
+        similar: "온라인 음악 교육 플랫폼 개발 및 콘텐츠 제작",
+        match: "완전 일치",
+        imageSrc1: "/images/task1_original.png",
+        imageSrc2: "/images/task1_similar.png",
+        fileName1: "original_음악교육.pdf",
+        fileName2: "유사_음악교육.pdf"
+    },
+    {
+        id: 8,
+        target: "지역 음악 축제 기획 및 운영 (문화 관광 연계)",
+        similar: "로컬 뮤직 페스티벌 기획 (관광 상품 연계)",
+        match: "부분 일치",
+        imageSrc1: "/images/task2_original.png",
+        imageSrc2: "/images/task2_similar.png",
+        fileName1: "original_음악축제.pdf",
+        fileName2: "유사_음악축제.pdf"
+    },
+    {
+        id: 9,
+        target: "블록체인 기반 음원 저작권 관리 시스템",
+        similar: "NFT 활용 음악 저작권 보호 플랫폼",
+        match: "부분 일치",
+        imageSrc1: "/images/task1_original.png",
+        imageSrc2: "/images/task1_similar.png",
+        fileName1: "original_저작권.pdf",
+        fileName2: "유사_저작권.pdf"
+    },
+    {
+        id: 10,
+        target: "VR/AR 기술을 활용한 몰입형 음악 콘서트",
+        similar: "가상현실 음악 공연 플랫폼 개발",
+        match: "부분 일치",
+        imageSrc1: "/images/task2_original.png",
+        imageSrc2: "/images/task2_similar.png",
+        fileName1: "original_VRAR콘서트.pdf",
+        fileName2: "유사_VRAR콘서트.pdf"
+    }
 ];
+
 
 const TextSimilarityTable = () => {
     const [highlightedId, setHighlightedId] = useState(null);
 
-    const onPlayClick = (id) => {
+    const onRowClick = (id) => {
         setHighlightedId(id);
     };
 
+    // 헤더 테이블 JSX
+    const headerTable = (
+        <table className="pms-table">
+            <thead>
+            <tr>
+                <th className="w-[50px]">번호</th>
+                <th className="w-auto">대상 과제 구간</th>
+                <th className="w-auto">유사 과제 구간</th>
+                <th className="w-[120px]">종목 구분</th>
+            </tr>
+            </thead>
+        </table>
+    );
+    const selectedRow = tableData.find(row => row.id === highlightedId);
     return (
-        <div className="relative border border-[#d3d3d3] z-2 bg-white p-3">
-            <table className="pms-table mb-4 w-full text-sm">
-                <thead>
-                <tr>
-                    <th className="w-[50px]">번호</th>
-                    <th className="w-auto">대상 과제 구간</th>
-                    <th className="w-auto">유사 과제 구간</th>
-                    <th className="w-[120px]">종목 구분</th>
-                    <th className="w-[60px]">확인</th>
-                </tr>
-                </thead>
-                <tbody>
-                {tableData.map((row) => (
-                    <tr
-                        key={row.id}
-                        className={
-                            highlightedId === row.id
-                                ? "bg-[#fcf8e3]" // 하이라이트 색상
-                                : ""
-                        }
-                    >
-                        <td>{row.id}</td>
-                        <td>{row.target}</td>
-                        <td>{row.similar}</td>
-                        <td>{row.match}</td>
-                        <td className="relative">
-                            <button
-                                onClick={() => onPlayClick(row.id)}
-                                className="
-                    absolute top-[calc(50%-4px)] left-1/2 -translate-x-1/2 -translate-y-1/2
-                    w-6 h-8 text-lg leading-none flex items-center justify-center
-                    text-[#454545] border-b border-[#454545] rounded-none
-                    pb-0 -mb-[1px] cursor-pointer
-                  "
-                                aria-label="재생"
-                            >
-                                ▶
-                            </button>
-                        </td>
-                    </tr>
-                ))}
-                </tbody>
-            </table>
+        <div>
+            <CustomScrollbar
+                style={{ maxHeight: 191 }}
+                header={headerTable}
+            >
+                <table className="pms-table">
+                    <tbody>
+                    {tableData.map((row) => (
+                        <tr
+                            key={row.id}
+                            className={`cursor-pointer hover:bg-blue-50 ${
+                                highlightedId === row.id ? "bg-[#fcf8e3]" : ""
+                            }`}
+                            onClick={() => onRowClick(row.id)}
+                        >
+                            <td className="w-[50px] border border-[#d3d3d3] p-2 text-center">{row.id}</td>
+                            <td className="w-auto border border-[#d3d3d3] p-2 text-left">{row.target}</td>
+                            <td className="w-auto border border-[#d3d3d3] p-2 text-left">{row.similar}</td>
+                            <td className={`w-[120px] border border-[#d3d3d3] p-2 text-center ${row.match}`}>
+                                {row.match}
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </CustomScrollbar>
 
-            <div className="p-4 bg-gray-100 h-96 flex items-center justify-center">
-                <span className="text-gray-500">이미지 상세 내용 영역</span>
+            <div className="flex items-center justify-center mt-4 rounded-lg gap-4">
+                <PDFViewer
+                    imageSrc={selectedRow?.imageSrc1}
+                    fileName={selectedRow?.fileName1}
+                />
+                <PDFViewer
+                    imageSrc={selectedRow?.imageSrc2}
+                    fileName={selectedRow?.fileName2}
+                />
             </div>
         </div>
     );
