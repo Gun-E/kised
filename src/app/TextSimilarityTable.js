@@ -7,11 +7,11 @@ const tableData = [
         id: 1,
         target: "송캠프 운영 및 음원",
         similar: "송캠프 운영 및 음원",
-        match: "부분 일치",
+        match: "완전 일치",
         imageSrc1: "/images/task1_original.png",
         imageSrc2: "/images/task1_similar.png",
-        fileName1: "original_송캠프.pdf",
-        fileName2: "유사_송캠프.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 2,
@@ -20,18 +20,18 @@ const tableData = [
         match: "완전 일치",
         imageSrc1: "/images/task2_original.png",
         imageSrc2: "/images/task2_similar.png",
-        fileName1: "original_공연콘텐츠.pdf",
-        fileName2: "유사_공연콘텐츠.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 3,
         target: "AI 기반 추천 시스템",
         similar: "AI 기반 추천 시스템과",
         match: "부분 일치",
-        imageSrc1: "/images/task1_original.png",
-        imageSrc2: "/images/task1_similar.png",
-        fileName1: "original_음원유통.pdf",
-        fileName2: "유사_음원유통.pdf"
+        imageSrc1: "/images/task3_original.png",
+        imageSrc2: "/images/task3_similar.png",
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 4,
@@ -40,8 +40,8 @@ const tableData = [
         match: "완전 일치",
         imageSrc1: "/images/task2_original.png",
         imageSrc2: "/images/task2_similar.png",
-        fileName1: "original_수익모델.pdf",
-        fileName2: "유사_수익모델.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 5,
@@ -50,8 +50,8 @@ const tableData = [
         match: "부분 일치",
         imageSrc1: "/images/task1_original.png",
         imageSrc2: "/images/task1_similar.png",
-        fileName1: "original_플랫폼관리.pdf",
-        fileName2: "유사_플랫폼관리.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 6,
@@ -60,8 +60,8 @@ const tableData = [
         match: "부분 일치",
         imageSrc1: "/images/task2_original.png",
         imageSrc2: "/images/task2_similar.png",
-        fileName1: "original_매니지먼트.pdf",
-        fileName2: "유사_매니지먼트.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 7,
@@ -70,8 +70,8 @@ const tableData = [
         match: "완전 일치",
         imageSrc1: "/images/task1_original.png",
         imageSrc2: "/images/task1_similar.png",
-        fileName1: "original_음악교육.pdf",
-        fileName2: "유사_음악교육.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 8,
@@ -80,8 +80,8 @@ const tableData = [
         match: "부분 일치",
         imageSrc1: "/images/task2_original.png",
         imageSrc2: "/images/task2_similar.png",
-        fileName1: "original_음악축제.pdf",
-        fileName2: "유사_음악축제.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 9,
@@ -90,8 +90,8 @@ const tableData = [
         match: "부분 일치",
         imageSrc1: "/images/task1_original.png",
         imageSrc2: "/images/task1_similar.png",
-        fileName1: "original_저작권.pdf",
-        fileName2: "유사_저작권.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     },
     {
         id: 10,
@@ -100,8 +100,8 @@ const tableData = [
         match: "부분 일치",
         imageSrc1: "/images/task2_original.png",
         imageSrc2: "/images/task2_similar.png",
-        fileName1: "original_VRAR콘서트.pdf",
-        fileName2: "유사_VRAR콘서트.pdf"
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
     }
 ];
 
@@ -113,7 +113,6 @@ const TextSimilarityTable = () => {
         setHighlightedId(id);
     };
 
-    // 헤더 테이블 JSX
     const headerTable = (
         <table className="pms-table">
             <thead>
@@ -126,11 +125,21 @@ const TextSimilarityTable = () => {
             </thead>
         </table>
     );
-    const selectedRow = tableData.find(row => row.id === highlightedId);
+
+    // 기본 이미지 및 파일명
+    const defaultRow = {
+        imageSrc1: "/images/original.png",
+        imageSrc2: "/images/similar.png",
+        fileName1: "20310779.pdf",
+        fileName2: "20303372.pdf"
+    };
+
+    const selectedRow = tableData.find(row => row.id === highlightedId) || defaultRow;
+
     return (
         <div>
             <CustomScrollbar
-                style={{ maxHeight: 191 }}
+                style={{ maxHeight: 126 }}
                 header={headerTable}
             >
                 <table className="pms-table">
@@ -146,7 +155,7 @@ const TextSimilarityTable = () => {
                             <td className="w-[50px] border border-[#d3d3d3] p-2 text-center">{row.id}</td>
                             <td className="w-auto border border-[#d3d3d3] p-2 text-left">{row.target}</td>
                             <td className="w-auto border border-[#d3d3d3] p-2 text-left">{row.similar}</td>
-                            <td className={`w-[120px] border border-[#d3d3d3] p-2 text-center ${row.match}`}>
+                            <td className="w-[120px] border border-[#d3d3d3] p-2 text-center">
                                 {row.match}
                             </td>
                         </tr>
@@ -157,16 +166,17 @@ const TextSimilarityTable = () => {
 
             <div className="flex items-center justify-center mt-4 rounded-lg gap-4">
                 <PDFViewer
-                    imageSrc={selectedRow?.imageSrc1}
-                    fileName={selectedRow?.fileName1}
+                    imageSrc={selectedRow.imageSrc1}
+                    fileName={selectedRow.fileName1}
                 />
                 <PDFViewer
-                    imageSrc={selectedRow?.imageSrc2}
-                    fileName={selectedRow?.fileName2}
+                    imageSrc={selectedRow.imageSrc2}
+                    fileName={selectedRow.fileName2}
                 />
             </div>
         </div>
     );
 };
+
 
 export default TextSimilarityTable;

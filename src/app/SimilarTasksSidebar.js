@@ -15,7 +15,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000001",
             category: "창업 도약 패키지",
             taskName: "도전! K-스타트업 2020 혁신창업리그 운영 및 초기 창업 기업 성장 지원 프로그램 공고",
-            representative: "홍길동",
+            representative: "홍*동",
             textScore: "85.23",
             imageScore: "62.10",
             totalScore: "78.55"
@@ -25,7 +25,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000002",
             category: "예비 창업 패키지",
             taskName: "서울창조경제혁신센터 주관 2020년 예비 창업 패키지 지원 사업 공고 및 신청 안내",
-            representative: "이순신",
+            representative: "이*신",
             textScore: "92.50",
             imageScore: "78.90",
             totalScore: "89.15",
@@ -36,7 +36,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000003",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2020 운영기관 선정 및 혁신 창업 생태계 조성 사업 추진 계획",
-            representative: "김철수",
+            representative: "김*수",
             textScore: "78.15",
             imageScore: "55.30",
             totalScore: "71.20"
@@ -46,7 +46,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000004",
             category: "예비 창업 패키지",
             taskName: "2020년 도전! K-스타트업 예비창업리그 과제명 및 평가 기준 상세 안내",
-            representative: "박영희",
+            representative: "박*희",
             textScore: "88.70",
             imageScore: "70.20",
             totalScore: "82.45"
@@ -56,7 +56,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000005",
             category: "창업 도약 패키지",
             taskName: "도전! K-스타트업 2020 혁신창업리그 운영 및 참가 기업 모집 요강",
-            representative: "최민수",
+            representative: "최*수",
             textScore: "80.40",
             imageScore: "65.70",
             totalScore: "75.10"
@@ -66,7 +66,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000006",
             category: "예비 창업 패키지",
             taskName: "서울창조경제혁신센터 주관 2020년 예비 창업 패키지 참여 기업 최종 선정 결과",
-            representative: "정지은",
+            representative: "정*은",
             textScore: "95.10",
             imageScore: "82.50",
             totalScore: "91.00"
@@ -76,7 +76,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000007",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2020 운영기관의 역할과 책임 및 성과 관리 방안",
-            representative: "강동원",
+            representative: "강*원",
             textScore: "75.90",
             imageScore: "50.80",
             totalScore: "68.35"
@@ -86,7 +86,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000008",
             category: "예비 창업 패키지",
             taskName: "2020년 도전! K-스타트업 예비창업리그 우수 과제명 발표 및 시상 내역",
-            representative: "윤아름",
+            representative: "윤*름",
             textScore: "90.00",
             imageScore: "75.60",
             totalScore: "85.80"
@@ -96,7 +96,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000009",
             category: "창업 도약 패키지",
             taskName: "도전! K-스타트업 2020 혁신창업리그 운영 성과 보고 및 향후 계획",
-            representative: "조세호",
+            representative: "조*호",
             textScore: "83.60",
             imageScore: "68.90",
             totalScore: "78.25"
@@ -106,7 +106,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000010",
             category: "예비 창업 패키지",
             taskName: "서울창조경제혁신센터 주관 2020년 예비 창업 패키지 교육 프로그램 안내",
-            representative: "장미란",
+            representative: "장*란",
             textScore: "91.80",
             imageScore: "77.30",
             totalScore: "87.05"
@@ -116,7 +116,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000011",
             category: "창업 도약 패키지",
             taskName: "2021년 K-스타트업 창업지원 사업 공고 및 유망 기술 기반 창업 기업 발굴",
-            representative: "류준열",
+            representative: "류*열",
             textScore: "87.00",
             imageScore: "60.00",
             totalScore: "79.00"
@@ -126,7 +126,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000012",
             category: "예비 창업 패키지",
             taskName: "K-스타트업 2021년 예비창업자 모집 및 아이디어 사업화 지원 프로그램",
-            representative: "송혜교",
+            representative: "송*교",
             textScore: "90.50",
             imageScore: "75.00",
             totalScore: "86.25"
@@ -136,7 +136,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000013",
             category: "창업 도약 패키지",
             taskName: "2022년 혁신창업리그 참가팀 모집 및 글로벌 시장 진출을 위한 도약 지원",
-            representative: "이병헌",
+            representative: "이*헌",
             textScore: "81.00",
             imageScore: "58.00",
             totalScore: "74.50"
@@ -146,7 +146,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000014",
             category: "예비 창업 패키지",
             taskName: "서울창업허브 주관 2022년 예비창업 패키지 지원 사업 상세 요강",
-            representative: "김태리",
+            representative: "김*리",
             textScore: "89.00",
             imageScore: "72.00",
             totalScore: "84.50"
@@ -156,7 +156,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000015",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2023년 글로벌 도약 프로그램 선정 기업 및 해외 시장 개척 지원",
-            representative: "하정우",
+            representative: "하*우",
             textScore: "84.50",
             imageScore: "63.00",
             totalScore: "77.75"
@@ -166,7 +166,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000016",
             category: "예비 창업 패키지",
             taskName: "2023년 K-스타트업 예비창업자 지원 및 창업 초기 기업 성장 멘토링",
-            representative: "수지",
+            representative: "수*",
             textScore: "91.00",
             imageScore: "78.00",
             totalScore: "88.00"
@@ -176,7 +176,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000017",
             category: "창업 도약 패키지",
             taskName: "혁신기술 창업기업 도약 지원사업 2024년 참여 기업 모집 및 사업화 자금 지원",
-            representative: "박서준",
+            representative: "박*준",
             textScore: "79.00",
             imageScore: "52.00",
             totalScore: "71.00"
@@ -186,7 +186,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000018",
             category: "예비 창업 패키지",
             taskName: "2024년 청년창업사관학교 예비창업 과정 운영 및 우수 아이디어 발굴",
-            representative: "아이유",
+            representative: "아*유",
             textScore: "93.00",
             imageScore: "80.00",
             totalScore: "89.00"
@@ -196,7 +196,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000019",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2024 재창업 지원 프로그램 및 실패 기업인의 성공적인 재기 지원",
-            representative: "현빈",
+            representative: "현*",
             textScore: "82.00",
             imageScore: "59.00",
             totalScore: "75.50"
@@ -206,7 +206,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000020",
             category: "예비 창업 패키지",
             taskName: "2024년 K-스타트업 예비창업 교육 커리큘럼 및 창업 전문가 초청 강연",
-            representative: "손예진",
+            representative: "손*진",
             textScore: "90.00",
             imageScore: "74.00",
             totalScore: "86.00"
@@ -216,7 +216,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000021",
             category: "창업 도약 패키지",
             taskName: "2025년 K-스타트업 스케일업 지원 사업 공고 및 성장 단계별 맞춤형 지원",
-            representative: "공유",
+            representative: "공*",
             textScore: "86.50",
             imageScore: "67.20",
             totalScore: "80.90"
@@ -226,7 +226,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000022",
             category: "예비 창업 패키지",
             taskName: "2025년 예비창업가를 위한 정부지원사업 안내 및 성공적인 사업화 전략",
-            representative: "김고은",
+            representative: "김*은",
             textScore: "94.00",
             imageScore: "81.50",
             totalScore: "90.25"
@@ -236,7 +236,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000023",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2025년 해외진출 지원 사업 참가 기업 모집 및 글로벌 액셀러레이팅",
-            representative: "박보검",
+            representative: "박*검",
             textScore: "80.20",
             imageScore: "56.80",
             totalScore: "73.50"
@@ -246,7 +246,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000024",
             category: "예비 창업 패키지",
             taskName: "서울시 2025년 청년 예비창업 지원 사업 공고 및 창업 공간 제공",
-            representative: "김유정",
+            representative: "김*정",
             textScore: "87.80",
             imageScore: "70.50",
             totalScore: "83.15"
@@ -256,7 +256,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000025",
             category: "창업 도약 패키지",
             taskName: "2026년 K-스타트업 TIPS 프로그램 참여 기업 선정 및 투자 연계 지원",
-            representative: "변요한",
+            representative: "변*한",
             textScore: "83.90",
             imageScore: "61.00",
             totalScore: "76.45"
@@ -266,7 +266,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000026",
             category: "예비 창업 패키지",
             taskName: "2026년 혁신 아이디어 예비창업 지원 사업 및 비즈니스 모델 고도화",
-            representative: "이성경",
+            representative: "이*경",
             textScore: "92.10",
             imageScore: "79.00",
             totalScore: "88.80"
@@ -276,7 +276,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000027",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2026년 재도전 기업 지원 프로그램 및 재창업 성공 사례 발표",
-            representative: "조정석",
+            representative: "조*석",
             textScore: "77.50",
             imageScore: "54.20",
             totalScore: "70.85"
@@ -286,7 +286,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000028",
             category: "예비 창업 패키지",
             taskName: "2026년 지역거점 예비창업 패키지 사업 및 지역 특화 창업 생태계 조성",
-            representative: "거미",
+            representative: "거*",
             textScore: "89.50",
             imageScore: "73.00",
             totalScore: "85.75"
@@ -296,7 +296,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000029",
             category: "창업 도약 패키지",
             taskName: "2027년 K-스타트업 투자유치 지원 프로그램 및 데모데이 개최",
-            representative: "김수현",
+            representative: "김*현",
             textScore: "85.00",
             imageScore: "64.50",
             totalScore: "78.75"
@@ -306,7 +306,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000030",
             category: "예비 창업 패키지",
             taskName: "2027년 기술창업 예비창업 지원 사업 및 특허 출원 연계 컨설팅",
-            representative: "서예지",
+            representative: "서*지",
             textScore: "91.20",
             imageScore: "76.80",
             totalScore: "87.00"
@@ -316,7 +316,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000031",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2027년 ESG 경영 지원 사업 및 지속가능한 성장 모델 구축",
-            representative: "정우성",
+            representative: "정*성",
             textScore: "81.70",
             imageScore: "57.90",
             totalScore: "74.80"
@@ -326,7 +326,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000032",
             category: "예비 창업 패키지",
             taskName: "2027년 스마트팜 창업 예비창업 지원 사업 및 농업 기술 융합 아이디어",
-            representative: "김하늘",
+            representative: "김*늘",
             textScore: "88.30",
             imageScore: "71.40",
             totalScore: "83.60"
@@ -336,7 +336,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000033",
             category: "창업 도약 패키지",
             taskName: "2028년 K-스타트업 디지털 전환 지원 사업 및 스마트 팩토리 구축 컨설팅",
-            representative: "이정재",
+            representative: "이*재",
             textScore: "84.10",
             imageScore: "62.30",
             totalScore: "77.50"
@@ -346,7 +346,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000034",
             category: "예비 창업 패키지",
             taskName: "2028년 소셜벤처 예비창업 육성 프로그램 및 사회적 가치 창출 모델 개발",
-            representative: "전지현",
+            representative: "전*현",
             textScore: "90.70",
             imageScore: "75.10",
             totalScore: "86.90"
@@ -356,7 +356,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000035",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2028년 지역 특화 산업 지원 사업 및 균형 발전 기여 방안",
-            representative: "박정민",
+            representative: "박*민",
             textScore: "79.80",
             imageScore: "55.50",
             totalScore: "72.65"
@@ -366,7 +366,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000036",
             category: "예비 창업 패키지",
             taskName: "2028년 관광 분야 예비창업 지원 사업 및 지역 문화 콘텐츠 개발 연계",
-            representative: "고아성",
+            representative: "고*성",
             textScore: "87.00",
             imageScore: "69.80",
             totalScore: "82.40"
@@ -376,7 +376,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000037",
             category: "창업 도약 패키지",
             taskName: "2029년 K-스타트업 수출 바우처 지원 사업 및 해외 마케팅 전략 수립",
-            representative: "마동석",
+            representative: "마*석",
             textScore: "82.50",
             imageScore: "60.10",
             totalScore: "76.30"
@@ -386,7 +386,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000038",
             category: "예비 창업 패키지",
             taskName: "2029년 콘텐츠 산업 예비창업 지원 사업 및 지식재산권 확보 전략",
-            representative: "김혜수",
+            representative: "김*수",
             textScore: "89.90",
             imageScore: "74.70",
             totalScore: "86.60"
@@ -396,7 +396,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000039",
             category: "창업 도약 패키지",
             taskName: "K-스타트업 2029년 일자리 창출 지원 사업 및 우수 인재 채용 지원금",
-            representative: "송중기",
+            representative: "송*기",
             textScore: "78.00",
             imageScore: "51.00",
             totalScore: "70.50"
@@ -406,7 +406,7 @@ const SimilarTasksSidebar = ({isOpen, onClose}) => {
             taskNum: "000040",
             category: "예비 창업 패키지",
             taskName: "2029년 친환경 스타트업 예비창업 지원 사업 및 ESG 경영 도입 컨설팅",
-            representative: "송가인",
+            representative: "송*인",
             textScore: "90.30",
             imageScore: "76.50",
             totalScore: "87.90"

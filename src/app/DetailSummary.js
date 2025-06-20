@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import HalfCircleDot from "@/app/HalfCircleDot";
 import OutputCriteriaModal from "@/app/OutputCriteriaModal";
 
@@ -36,21 +36,21 @@ const DetailSummary = () => {
                             <tbody>
                             <tr>
                                 <td>대상 과제</td>
-                                <td>00</td>
-                                <td>사업 계획서 제출 과제 명 A</td>
-                                <td>창업 도약 패키지</td>
+                                <td>20310779</td>
+                                <td>지능형 음악 분석 시스템 개발</td>
+                                <td>예비 창업 패키지</td>
                                 <td>2025</td>
-                                <td>홍길동</td>
-                                <td>(주) 홍길동</td>
+                                <td>이*호</td>
+                                <td>예비 창업자</td>
                             </tr>
                             <tr>
                                 <td>유사 과제</td>
-                                <td>00</td>
-                                <td>사업 계획서 제출 과제 명 B</td>
-                                <td>예비 창업 패키지</td>
-                                <td>2024</td>
-                                <td>이순신</td>
-                                <td>예비 창업자</td>
+                                <td>20303372</td>
+                                <td>AI 기반 음악 추천 플랫폼</td>
+                                <td>초기 창업 패키지</td>
+                                <td>2025</td>
+                                <td>이*일</td>
+                                <td>베이스바이오아트</td>
                             </tr>
                             </tbody>
                         </table>
@@ -77,22 +77,19 @@ const DetailSummary = () => {
                             <tr>
                                 <th>개수</th>
                                 <th>완전일치</th>
-                                <th style={{
-                                    borderRight: "1px inset #d3d3d3"
-                                }}>부분일치
-                                </th>
+                                <th style={{ borderRight: "1px inset #d3d3d3" }}>부분일치</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>000</td>
-                                <td>000(00%)</td>
-                                <td>000(00%)</td>
-                                <td>00.00</td>
-                                <td>00.00</td>
-                                <td>00.00</td>
+                                <td>3,412</td>
+                                <td>598</td>
+                                <td>12</td>
+                                <td>7 (58.3%)</td>
+                                <td>5 (41.7%)</td>
+                                <td>82.35</td>
+                                <td>76.89</td>
+                                <td>79.62</td>
                             </tr>
                             </tbody>
                         </table>
@@ -118,32 +115,35 @@ const DetailSummary = () => {
                                 <th>이미지 개수</th>
                                 <th>중복 지수</th>
                                 <th>중첩률 지수</th>
-                                <th style={{
-                                    borderRight: "1px inset #d3d3d3"
-                                }}>유의 수준</th>
+                                <th style={{ borderRight: "1px inset #d3d3d3" }}>유의 수준</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>00</td>
-                                <td>000</td>
+                                <td>24</td>
+                                <td>9</td>
                                 <td>93.5%</td>
-                                <td>93.5%</td>
+                                <td>88.2%</td>
                                 <td>
                                     <div className="flex items-center justify-center gap-1">
                                         <div className="w-2 h-2 bg-[#f86f6f] rounded-full"></div>
                                         <span>높음</span>
                                     </div>
                                 </td>
-                                <td>00.00</td>
-                                <td>00.00</td>
+                                <td>79.45</td>
+                                <td>
+                                    <div className="flex items-center justify-center gap-1">
+                                        <div className="w-2 h-2 bg-[#f86f6f] rounded-full"></div>
+                                        <span>높음</span>
+                                    </div>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <OutputCriteriaModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
+            <OutputCriteriaModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </>
     );
 };
