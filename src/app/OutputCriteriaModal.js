@@ -7,8 +7,11 @@ const OutputCriteriaModal = ({isOpen, onClose}) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30" onClick={onClose}>
-            <div className="bg-white w-[600px] max-h-[90vh] overflow-y-auto rounded-sm shadow-lg relative">
-                <div className="bg-[#62687e] h-[25px] flex items-center justify-between px-1">
+            <div
+                className="bg-white w-[600px] max-h-[90vh] overflow-y-auto rounded-sm shadow-lg relative"
+                onClick={(e) => e.stopPropagation()}
+            >
+                <div className="bg-[#62687e] h-[30px] flex items-center justify-between pl-2 pr-2 rounded-t-sm">
                     <div className="flex items-center gap-1.5 ml-1">
                         <span className="text-white text-[10px] font-bold">산출 기준 확인 팝업</span>
                     </div>
@@ -23,7 +26,7 @@ const OutputCriteriaModal = ({isOpen, onClose}) => {
                         <div className="flex items-center gap-2 mb-1">
                             <h2 className="text-[13px] font-bold text-[#1E40AF]">최종 중복성 지수</h2>
                         </div>
-                        <ul className="ml-4 list-disc list-inside text-[11px] space-y-1">
+                        <ul className="ml-4 list-disc list-inside text-[9px] space-y-1">
                             <li>
                                 <InlineMath>{'\\text{최종 중복성 지수} = (\\text{텍스트 중복성 지수} \\times \\text{비교 대상 문서 텍스트 비율}) + (\\text{이미지 중복성 지수} \\times \\text{비교 문서 이미지 비율})'}</InlineMath>
                             </li>
@@ -34,32 +37,35 @@ const OutputCriteriaModal = ({isOpen, onClose}) => {
                         <div className="flex items-center gap-2 mb-1">
                             <h2 className="text-[13px] font-bold text-[#1E40AF]">텍스트 중복</h2>
                         </div>
-                        <p>점수 산출 일시 : <strong className="font-bold">2025-01-01 07:30:00</strong></p>
-                        <p>점수 산출 기준 대상 과제 (00000000) 불용어 적용 일시 : <strong className="font-bold">2025-01-01
+                        <p className="text-[9px]">점수 산출 일시 : <strong className="font-bold">2025-01-01 07:30:00</strong>
+                        </p>
+                        <p className="text-[9px]">점수 산출 기준 대상 과제 (00000000) 불용어 적용 일시 : <strong className="font-bold">2025-01-01
                             07:30:00</strong></p>
-                        <p>점수 산출 기준 비교 과제 (00000001) 불용어 적용 일시 : <strong className="font-bold">2025-01-01
+                        <p className="text-[9px]">점수 산출 기준 비교 과제 (00000001) 불용어 적용 일시 : <strong className="font-bold">2025-01-01
                             07:30:00</strong></p>
-                        <p>구간 비교 기준 대상 과제 (00000000) 불용어 적용 일시 : <strong className="font-bold">2025-01-01
+                        <p className="text-[9px]">구간 비교 기준 대상 과제 (00000000) 불용어 적용 일시 : <strong className="font-bold">2025-01-01
                             07:30:00</strong></p>
-                        <p>구간 비교 기준 비교 과제 (00000001) 불용어 적용 일시 : <strong className="font-bold">2025-01-01
+                        <p className="text-[9px]">구간 비교 기준 비교 과제 (00000001) 불용어 적용 일시 : <strong className="font-bold">2025-01-01
                             07:30:00</strong></p>
                         <div className="mt-3">
                             <div className="flex items-center gap-2 mb-1">
                                 <h2 className="text-[13px] font-bold text-[#1E40AF]">텍스트 중복률 계산기준</h2>
                             </div>
-                            <ul className="ml-4 list-disc list-inside text-[11px] space-y-1">
+                            <ul className="ml-4 list-disc list-inside text-[9px] space-y-1">
                                 <li>텍스트 유사도 산출 근거</li>
-                                <ul className="list-[circle] ml-6">
-                                    <li>문단의 작성된 텍스트를 탐색된 범위 값의 코사인 유사도</li>
+                                <ul className="list-[circle] ml-6 text-[9px]">
+                                    <li><span className="text-[11px]">문단의 작성된 텍스트를 탐색된 범위 값의 코사인 유사도</span></li>
                                 </ul>
                                 <li>단일 문장 중복률 산출 근거</li>
-                                <ul className="list-[circle] ml-6">
-                                    <li>문장의 작성된 텍스트를 기준 비교 문서와 동일한 텍스트의 수</li>
+                                <ul className="list-[circle] ml-6 text-[9px]">
+                                    <li><span className="text-[11px]">문장의 작성된 텍스트를 기준 비교 문서와 동일한 텍스트의 수</span></li>
                                 </ul>
                                 <li>텍스트 중복성지수 산출 근거</li>
-                                <ul className="list-[circle] ml-6">
+                                <ul className="list-[circle] ml-6 text-[9px]">
                                     <li>
-                                        <InlineMath>{'\\text{텍스트 중복성 지수} = (\\text{유사도} \\times 0.x) + (\\text{중첩률} \\times 0.x)'}</InlineMath>
+                                        <div className="text-[9px]">
+                                            <InlineMath>{'\\text{텍스트 중복성 지수} = (\\text{유사도} \\times 0.x) + (\\text{중첩률} \\times 0.x)'}</InlineMath>
+                                        </div>
                                     </li>
                                 </ul>
                             </ul>
@@ -70,26 +76,38 @@ const OutputCriteriaModal = ({isOpen, onClose}) => {
                         <div className="flex items-center gap-2 mb-1">
                             <h2 className="text-[13px] font-bold text-[#1E40AF]">이미지 중복</h2>
                         </div>
-                        <p>점수 산출 일시 : <strong className="font-bold">2025-01-01 07:30:00</strong></p>
+                        <p className="text-[9px]">점수 산출 일시 : <strong className="font-bold">2025-01-01 07:30:00</strong>
+                        </p>
                         <div className="mt-3">
                             <div className="flex items-center gap-2 mb-1">
                                 <h2 className="text-[13px] font-bold text-[#1E40AF]">이미지 중복률 계산기준</h2>
                             </div>
-                            <ul className="ml-4 list-disc list-inside text-[11px] space-y-1">
+                            <ul className="ml-4 list-disc list-inside text-[9px] space-y-1">
                                 <li>영역 가중치 : 페이지에서의 이미지 영역의 크기 비율</li>
-                                <ul className="list-[circle] ml-6">
-                                    <li><InlineMath math="\text{영역가중치} = \frac{\text{이미지 영역 크기}}{\text{전체 페이지 크기}}"/>
+                                <ul className="list-[circle] ml-6 text-[9px]">
+                                    <li>
+                                        <div className="text-[9px]">
+                                            <InlineMath
+                                                math="\text{영역가중치} = \frac{\text{이미지 영역 크기}}{\text{전체 페이지 크기}}"/>
+                                        </div>
                                     </li>
                                 </ul>
                                 <li>중복 지수 : 대상 이미지의 특징 데이터와 유사과제 이미지의 특징 데이터의 비교 거리 (벡터 코사인 유사도)</li>
-                                <ul className="list-[circle] ml-6">
-                                    <li><InlineMath
-                                        math="\text{중복지수} = \frac{\text{비교문서 이미지벡터} \cdot \text{대상문서 이미지벡터}}{\|\text{비교문서 이미지벡터}\| \cdot \|\text{대상문서 이미지벡터}\|}"/>
+                                <ul className="list-[circle] ml-6 text-[9px]">
+                                    <li>
+                                        <div className="text-[9px]">
+                                            <InlineMath
+                                                math="\text{중복지수} = \frac{\text{비교문서 이미지벡터} \cdot \text{대상문서 이미지벡터}}{|\!\!\!\!|\text{비교문서 이미지벡터}|\!\!\!\!| \cdot |\!\!\!\!|\text{대상문서 이미지벡터}|\!\!\!\!|}"/>
+                                        </div>
                                     </li>
                                 </ul>
                                 <li>중첩률 지수 : 중복영역 중첩지수 평균 값</li>
-                                <ul className="list-[circle] ml-6">
-                                    <li><InlineMath math="\text{중첩률지수} = \frac{\text{영역가중치} + \text{중복지수}}{2}"/></li>
+                                <ul className="list-[circle] ml-6 text-[9px]">
+                                    <li>
+                                        <div className="text-[9px]">
+                                            <InlineMath math="\text{중첩률지수} = \frac{\text{영역가중치} + \text{중복지수}}{2}"/>
+                                        </div>
+                                    </li>
                                 </ul>
                                 <li>유의 수준 : 높음, 낮음으로 표기 (70% 이상일경우 높음으로 설정-변경가능)</li>
                             </ul>

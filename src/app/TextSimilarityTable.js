@@ -153,8 +153,8 @@ const TextSimilarityTable = () => {
                             onClick={() => onRowClick(row.id)}
                         >
                             <td className="w-[50px] border border-[#d3d3d3] p-2 text-center">{row.id}</td>
-                            <td className="w-auto border border-[#d3d3d3] p-2 text-left">{row.target}</td>
-                            <td className="w-auto border border-[#d3d3d3] p-2 text-left">{row.similar}</td>
+                            <td className="w-auto border border-[#d3d3d3] p-2 !text-left">{row.target}</td>
+                            <td className="w-auto border border-[#d3d3d3] p-2 !text-left">{row.similar}</td>
                             <td className="w-[120px] border border-[#d3d3d3] p-2 text-center">
                                 {row.match}
                             </td>

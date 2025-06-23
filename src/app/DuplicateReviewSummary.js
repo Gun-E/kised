@@ -22,12 +22,12 @@ const DuplicateReviewSummary = ({isOpen, onClose}) => {
             <div
                 className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-[1080px] max-w-[95vw] max-h-[90vh] overflow-hidden bg-white shadow-2xl rounded-sm">
                 <div
-                    className="bg-[#62687e] h-[38px] flex items-center justify-between px-4 rounded-t-sm"> {/* 상단바 패딩 조정 및 둥근 모서리 */}
+                    className="bg-[#62687e] h-[32px] flex items-center justify-between pl-3 pr-1.5 rounded-t-sm"> {/* 왼쪽 패딩을 더 넓게 */}
                     <div className="flex items-center gap-2">
                         <span className="text-white text-[12px] font-bold">중복도 검토 상세 조회 팝업</span>
                     </div>
                     <button onClick={onClose}
-                            className="flex items-center text-white justify-center w-5 h-5 cursor-pointer hover:bg-gray-700 rounded-full transition-colors"> {/* 닫기 버튼 스타일 개선 */}
+                            className="flex items-center text-white justify-center w-5 h-5 cursor-pointer">
                         ✕
                     </button>
                 </div>
@@ -37,11 +37,11 @@ const DuplicateReviewSummary = ({isOpen, onClose}) => {
                     <div>
                         <div className="text-center mb-6 text-sm"> {/* 폰트 크기 및 마진 조정 */}
                             <p className="font-light leading-relaxed">
-                                대상 과제 : <strong className="font-bold">사업 계획서 제출 과제명 A</strong>(00000000) / 유사 과제
-                                : <strong className="font-bold">사업 계획서 제출 과제명 B</strong>(00000001)
+                                대상 과제 : <strong className="font-bold">지능형 음악 분석 시스템 개발</strong>(20310779) / 유사 과제
+                                : <strong className="font-bold">AI 기반 음악 추천 플랫폼</strong>(20303372)
                             </p>
                             <p className="font-light">
-                                중복성 검토를 실행한 결과 최종 중복성 지수 <strong className="font-bold">00.00</strong>으로 해당 문서는 [<strong
+                                중복성 검토를 실행한 결과 최종 중복성 지수 <strong className="font-bold">96.32<span className="text-[10px]">%</span></strong>로 해당 문서는 [<strong
                                 className="font-bold">유사한 과제</strong>] 입니다.
                             </p>
                         </div>
