@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PDFViewer from "@/app/PDFViewer";
+import CustomScrollbar from "@/app/CustomScrollbar";
 
 const imageData = [
     {
@@ -35,13 +36,132 @@ const imageData = [
         similarImage: "/images/image4.png",
         similarFileName: "유사_페이지3.pdf",
         similarWeight: "45.5%",
-        imageSrc1: "/images/task2_original.png",
-        imageSrc2: "/images/task2_similar.png"
+        imageSrc1: "/images/image1_original.png",
+        imageSrc2: "/images/image1_similar.png"
     },
     {
         id: 3,
         targetPage: "3/6",
         targetImage: "/images/image5.png",
+        targetFileName: "대상_페이지3.pdf",
+        targetWeight: "15.5%",
+        duplicateIndex: "-",
+        overlapIndex: "-",
+        significanceLevel: "낮음",
+        significanceColor: "#6ebe73",
+        similarPage: "",
+        similarImage: "",
+        similarFileName: "",
+        similarWeight: "",
+        imageSrc1: "/images/task3_original.png",
+        imageSrc2: ""
+    },
+    {
+        id: 4,
+        targetPage: "3/6",
+        targetImage: "/images/image2.png",
+        targetFileName: "대상_페이지3.pdf",
+        targetWeight: "15.5%",
+        duplicateIndex: "-",
+        overlapIndex: "-",
+        significanceLevel: "낮음",
+        significanceColor: "#6ebe73",
+        similarPage: "",
+        similarImage: "",
+        similarFileName: "",
+        similarWeight: "",
+        imageSrc1: "/images/task3_original.png",
+        imageSrc2: ""
+    },
+    {
+        id: 5,
+        targetPage: "3/6",
+        targetImage: "/images/image3.png",
+        targetFileName: "대상_페이지3.pdf",
+        targetWeight: "15.5%",
+        duplicateIndex: "-",
+        overlapIndex: "-",
+        significanceLevel: "낮음",
+        significanceColor: "#6ebe73",
+        similarPage: "",
+        similarImage: "",
+        similarFileName: "",
+        similarWeight: "",
+        imageSrc1: "/images/task3_original.png",
+        imageSrc2: ""
+    },
+    {
+        id: 6,
+        targetPage: "3/6",
+        targetImage: "/images/image4.png",
+        targetFileName: "대상_페이지3.pdf",
+        targetWeight: "15.5%",
+        duplicateIndex: "-",
+        overlapIndex: "-",
+        significanceLevel: "낮음",
+        significanceColor: "#6ebe73",
+        similarPage: "",
+        similarImage: "",
+        similarFileName: "",
+        similarWeight: "",
+        imageSrc1: "/images/task3_original.png",
+        imageSrc2: ""
+    },
+    {
+        id: 7,
+        targetPage: "3/6",
+        targetImage: "/images/image5.png",
+        targetFileName: "대상_페이지3.pdf",
+        targetWeight: "15.5%",
+        duplicateIndex: "-",
+        overlapIndex: "-",
+        significanceLevel: "낮음",
+        significanceColor: "#6ebe73",
+        similarPage: "",
+        similarImage: "",
+        similarFileName: "",
+        similarWeight: "",
+        imageSrc1: "/images/task3_original.png",
+        imageSrc2: ""
+    },
+    {
+        id: 8,
+        targetPage: "3/6",
+        targetImage: "/images/image1.png",
+        targetFileName: "대상_페이지3.pdf",
+        targetWeight: "15.5%",
+        duplicateIndex: "-",
+        overlapIndex: "-",
+        significanceLevel: "낮음",
+        significanceColor: "#6ebe73",
+        similarPage: "",
+        similarImage: "",
+        similarFileName: "",
+        similarWeight: "",
+        imageSrc1: "/images/task3_original.png",
+        imageSrc2: ""
+    },
+    {
+        id: 9,
+        targetPage: "3/6",
+        targetImage: "/images/image2.png",
+        targetFileName: "대상_페이지3.pdf",
+        targetWeight: "15.5%",
+        duplicateIndex: "-",
+        overlapIndex: "-",
+        significanceLevel: "낮음",
+        significanceColor: "#6ebe73",
+        similarPage: "",
+        similarImage: "",
+        similarFileName: "",
+        similarWeight: "",
+        imageSrc1: "/images/task3_original.png",
+        imageSrc2: ""
+    },
+    {
+        id: 10,
+        targetPage: "3/6",
+        targetImage: "/images/image3.png",
         targetFileName: "대상_페이지3.pdf",
         targetWeight: "15.5%",
         duplicateIndex: "-",
@@ -72,29 +192,34 @@ const ImageDuplicateTable = () => {
 
     const selectedRow = imageData.find(item => item.id === selectedRowId);
 
+    const headerTable = (
+        <table className="pms-table w-full text-sm">
+            <thead>
+            <tr>
+                <th colSpan="4">대상 과제 이미지</th>
+                <th colSpan="3">중첩률</th>
+                <th colSpan="3">유사과제 이미지</th>
+            </tr>
+            <tr>
+                <th className="w-[50px]">번호</th>
+                <th className="w-[60px]">페이지</th>
+                <th className="w-auto">이미지</th>
+                <th className="w-[90px]">영역 가중치</th>
+                <th className="w-[75px]">중복지수</th>
+                <th className="w-[75px]">중첩률 지수</th>
+                <th className="w-[80px]">유의수준</th>
+                <th className="w-[65px]">페이지</th>
+                <th className="w-auto">이미지</th>
+                <th className="w-[65px]">영역 가중치</th>
+            </tr>
+            </thead>
+        </table>
+    );
+
     return (
         <div>
-            <div className="pms-table-container">
-                <table className="pms-table mb-4 w-full text-sm">
-                    <thead>
-                    <tr>
-                        <th colSpan="4">대상 과제 이미지</th>
-                        <th colSpan="3">중첩률</th>
-                        <th colSpan="3">유사과제 이미지</th>
-                    </tr>
-                    <tr>
-                        <th className="w-[50px]">번호</th>
-                        <th className="w-[60px]">페이지</th>
-                        <th className="w-auto">이미지</th>
-                        <th className="w-[90px]">영역 가중치</th>
-                        <th className="w-[75px]">중복지수</th>
-                        <th className="w-[75px]">중첩률 지수</th>
-                        <th className="w-[80px]">유의수준</th>
-                        <th className="w-[65px]">페이지</th>
-                        <th className="w-auto">이미지</th>
-                        <th className="w-[65px]">영역 가중치</th>
-                    </tr>
-                    </thead>
+            <CustomScrollbar style={{maxHeight: 183}} header={headerTable} headerHeight={61} hasFooter={true}>
+                <table className="pms-table w-full text-sm">
                     <tbody>
                     {imageData.map((item) => (
                         <tr
@@ -113,7 +238,8 @@ const ImageDuplicateTable = () => {
                                             className="w-9 h-6 object-cover"
                                         />
                                     ) : (
-                                        <div className="w-9 h-6 bg-gray-200 border border-gray-300 rounded flex items-center justify-center text-xs text-gray-500">
+                                        <div
+                                            className="w-9 h-6 bg-gray-200 border border-gray-300 rounded flex items-center justify-center text-xs text-gray-500">
                                             IMG
                                         </div>
                                     )}
@@ -124,7 +250,8 @@ const ImageDuplicateTable = () => {
                             <td>{item.overlapIndex}</td>
                             <td>
                                 <div className="flex items-center justify-center gap-1">
-                                    <div className="w-2 h-2 rounded-full" style={{ backgroundColor: item.significanceColor }}></div>
+                                    <div className="w-2 h-2 rounded-full"
+                                         style={{backgroundColor: item.significanceColor}}></div>
                                     <span>{item.significanceLevel}</span>
                                 </div>
                             </td>
@@ -138,8 +265,7 @@ const ImageDuplicateTable = () => {
                                             className="w-9 h-6 object-cover"
                                         />
                                     ) : (
-                                        <div className="w-9 h-6 bg-gray-200 border border-gray-300 rounded flex items-center justify-center text-xs text-gray-500">
-                                            IMG
+                                        <div>
                                         </div>
                                     )}
                                 </div>
@@ -147,13 +273,19 @@ const ImageDuplicateTable = () => {
                             <td>{item.similarWeight}</td>
                         </tr>
                     ))}
-
+                    </tbody>
+                </table>
+            </CustomScrollbar>
+            <div className="pms-table-footer-container">
+                <table className="pms-table w-full">
+                    <tbody>
                     <tr className="bg-[#eff3f5]">
                         <td colSpan="5">합계</td>
                         <td>{summaryData.totalOverlapIndex}</td>
                         <td>
                             <div className="flex items-center justify-center gap-1">
-                                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: summaryData.totalSignificanceColor }}></div>
+                                <div className="w-2 h-2 rounded-full"
+                                     style={{backgroundColor: summaryData.totalSignificanceColor}}></div>
                                 <span>{summaryData.totalSignificanceLevel}</span>
                             </div>
                         </td>
@@ -162,7 +294,6 @@ const ImageDuplicateTable = () => {
                     </tbody>
                 </table>
             </div>
-
             <div className="flex items-center justify-center mt-4 rounded-lg gap-4">
                 <PDFViewer
                     imageSrc={selectedRow?.imageSrc1}

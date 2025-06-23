@@ -10,6 +10,10 @@
     flex-direction: column;
     overflow: hidden;
 }
+.pms-table-footer-container {
+    @apply rounded-b-sm bg-white border border-[#d3d3d3];
+    overflow: hidden;
+}
 
 /* 기본 테이블 스타일 */
 .pms-table {
