@@ -258,9 +258,9 @@ const ImageDuplicateTable = () => {
                 <table className="pms-table w-full" style={{ tableLayout: 'fixed' }}>
                     <tbody>
                     <tr className="bg-[#eff3f5]">
-                        <td colSpan="5">합계</td>
-                        <td>{summaryData.totalOverlapIndex}</td>
-                        <td>
+                        <td className="w-[475px]" colSpan="5">합계</td>
+                        <td className="w-[75px]">{summaryData.totalOverlapIndex}</td>
+                        <td className="w-[80px]">
                             <div className="flex items-center justify-center gap-1">
                                 <div className="w-2 h-2 rounded-full"
                                      style={{backgroundColor: summaryData.totalSignificanceColor}}></div>
